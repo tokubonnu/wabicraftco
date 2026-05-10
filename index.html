@@ -4,6 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>WabiCraftCo — A quieter way to show your handmade work</title>
+<link rel="icon" type="image/png" href="uploads/WabiCraftCo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -249,15 +250,16 @@
     max-width: 1320px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 32px 28px;
   }
   .card-img {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 4 / 5;
     background-size: cover;
     background-position: center;
     margin-bottom: 16px;
     background-color: var(--bg-card);
+    transform: translateZ(0);
   }
   .card-title {
     font-size: 15px;
@@ -290,9 +292,40 @@
   }
   .btn-outline:hover { background: var(--ink); color: var(--bg); }
 
+  /* ---------- ABOUT ---------- */
+  .about {
+    padding: 100px 56px;
+    background: var(--bg-soft);
+  }
+  .about-inner {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  .about-label {
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+    margin-bottom: 20px;
+  }
+  .about-heading {
+    font-family: var(--serif);
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 40px;
+  }
+  .about-body p {
+    color: var(--ink-soft);
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  .about-body p:last-child { margin-bottom: 0; }
+
   /* ---------- FOOTER CTA ---------- */
   .footer-cta {
-    background: var(--bg-soft);
+    background: #ffffff;
     padding: 36px 56px 36px;
     border-top: 1px solid var(--line);
     position: relative;
@@ -479,7 +512,7 @@
   @media (max-width: 1100px) {
     .hero h1 { font-size: 48px; }
     .features-grid { grid-template-columns: repeat(5, 1fr); gap: 16px; }
-    .collection-grid { grid-template-columns: repeat(2, 1fr); }
+    .collection-grid { grid-template-columns: repeat(3, 1fr); }
     /* Tablet: keep the vase pinned bottom-left, but smaller; CTA copy stays centered */
     .footer-vase {
       width: 240px;
@@ -535,19 +568,18 @@
 <nav class="nav">
   <div class="logo">WabiCraftCo</div>
   <div class="nav-links">
-    <a href="#">Templates</a>
-    <a href="#">About</a>
-    <a href="#">Journal</a>
-    <a href="#">FAQ</a>
-    <a href="#">Contact</a>
+    <a href="#collection">Templates</a>
+    <a href="#about">About</a>
+    <a href="faq.html">FAQ</a>
+    <a href="https://www.etsy.com/shop/WabiCraftCo" target="_blank">Contact</a>
   </div>
-  <button class="nav-cta">
-    Join the list
+  <a class="nav-cta" href="https://www.etsy.com/shop/WabiCraftCo" target="_blank">
+    Shop on Etsy
     <svg class="leaf-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;margin:0;">
       <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19.8 2c1 3 .44 7.84-2 12.5"/>
       <path d="M2 21c0-3 1.85-5.36 5.08-6"/>
     </svg>
-  </button>
+  </a>
 </nav>
 
 <!-- ============ HERO ============ -->
@@ -557,8 +589,7 @@
     <div class="hero-rule"></div>
     <p class="lead">WabiCraftCo creates calm, Japandi-inspired Canva templates for handmade sellers who want their shop to feel thoughtful, warm, and beautifully put together.</p>
     <div class="hero-buttons">
-      <button class="btn btn-primary">Preview the collection</button>
-      <button class="btn btn-secondary">Coming soon</button>
+      <a class="btn btn-primary" href="https://www.etsy.com/listing/4502040621" target="_blank">Shop on Etsy</a>
     </div>
     <div class="hero-tagline">
       <svg class="leaf-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
@@ -615,55 +646,53 @@
 </section>
 
 <!-- ============ COLLECTION ============ -->
-<section class="collection">
+<section class="collection" id="collection">
   <div class="collection-head reveal">
     <h2>The Collection</h2>
-    <p>Eight versatile templates to tell your story with calm, intention, and beauty.<br/>Designed to help your handmade work shine.</p>
+    <p>30 Japandi-inspired Instagram templates across five styles.<br/>Everything your handmade shop needs, in one set.</p>
   </div>
   <div class="collection-grid reveal-stagger">
     <div class="card">
-      <div class="card-img" style="background-image:url('assets/images/limited-edition.jpg');"></div>
-      <div class="card-title">Limited Edition</div>
-      <div class="card-desc">For small drops, quiet scarcity, and pieces that won't return.</div>
+      <div class="card-img" style="background-image:url('assets/WabiCraftCo_A-01.png');"></div>
+      <div class="card-title">Hero Product</div>
+      <div class="card-desc">For launches, hero shots, and making your craft shine.</div>
     </div>
     <div class="card">
-      <div class="card-img" style="background-image:url('assets/images/new-season.jpg');"></div>
-      <div class="card-title">New Season</div>
-      <div class="card-desc">For seasonal refreshes and timeless pieces.</div>
+      <div class="card-img" style="background-image:url('assets/WabiCraftCo_B-01.png');"></div>
+      <div class="card-title">Editorial Announcement</div>
+      <div class="card-desc">For new arrivals, restocks, collabs, and shop updates.</div>
     </div>
     <div class="card">
-      <div class="card-img" style="background-image:url('assets/images/collection-launch.jpg');"></div>
-      <div class="card-title">Collection Launch</div>
-      <div class="card-desc">For introducing a new collection with meaning.</div>
+      <div class="card-img" style="background-image:url('assets/WabiCraftCo_C-01.png');"></div>
+      <div class="card-title">Customer Words</div>
+      <div class="card-desc">Let your customers' words do the talking.</div>
     </div>
     <div class="card">
-      <div class="card-img" style="background-image:url('assets/images/new-arrival.jpg');background-position:bottom;"></div>
-      <div class="card-title">New Arrival</div>
-      <div class="card-desc">For new pieces, restocks, and exciting shop updates.</div>
+      <div class="card-img" style="background-image:url('assets/WabiCraftCo_D-01.png');"></div>
+      <div class="card-title">Behind the Craft</div>
+      <div class="card-desc">Share the story and hands behind your work.</div>
     </div>
     <div class="card">
-      <div class="card-img" style="background-image:url('assets/images/gift-bundle.jpg');"></div>
-      <div class="card-title">Gift Bundle</div>
-      <div class="card-desc">For sets, pairings, and thoughtful gifting.</div>
-    </div>
-    <div class="card">
-      <div class="card-img" style="background-image:url('assets/images/thank-you.jpg');background-position:top;"></div>
-      <div class="card-title">Thank You</div>
-      <div class="card-desc">For showing appreciation and connecting with your customers.</div>
-    </div>
-    <div class="card">
-      <div class="card-img" style="background-image:url('assets/images/meet-the-maker-new.jpg');background-position:top;"></div>
-      <div class="card-title">Meet the Maker</div>
-      <div class="card-desc">For sharing the person and story behind the work.</div>
-    </div>
-    <div class="card">
-      <div class="card-img" style="background-image:url('assets/images/gratitude-new.jpg');background-position:top;"></div>
-      <div class="card-title">Gratitude</div>
-      <div class="card-desc">For milestones, community, and meaningful moments.</div>
+      <div class="card-img" style="background-image:url('assets/WabiCraftCo_E-01.png');"></div>
+      <div class="card-title">Special Edition</div>
+      <div class="card-desc">For limited drops, gift guides, and closing with intention.</div>
     </div>
   </div>
   <div class="view-all-wrap reveal">
-    <button class="btn-outline">View all templates</button>
+    <a class="btn-outline" href="https://www.etsy.com/listing/4502040621" target="_blank">Shop all 30 templates on Etsy</a>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="about-inner reveal">
+    <div class="about-label">About</div>
+    <h2 class="about-heading">Beautiful work deserves<br/>a beautiful frame.</h2>
+    <div class="about-body">
+      <p>These templates are made for makers — the potters, weavers, candle makers, and small-batch creators who pour care into every piece. Your Instagram feed should feel like an extension of that care.</p>
+      <p>Designed in Japan by a maker who lives surrounded by the slow, intentional beauty that inspires these templates. Inspired by wabi-sabi and Japandi aesthetics — imperfect, warm, intentional — each template is designed to step back and let your craft take center stage.</p>
+      <p>No design experience needed. Just Canva (free version works) and your own beautiful work.</p>
+    </div>
   </div>
 </section>
 
@@ -672,14 +701,11 @@
   <div class="footer-cta-inner reveal">
     <div class="footer-vase"></div>
     <div class="footer-cta-center">
-      <p>The first WabiCraftCo template set is coming soon.<br/>Join the list to be the first to know.</p>
-      <form class="signup-form" onsubmit="event.preventDefault();">
-        <input type="email" placeholder="Your email address" />
-        <button type="submit">Notify me</button>
-      </form>
+      <p>30 Japandi Instagram templates — now available on Etsy.<br/>Instant download. No design experience needed.</p>
+      <a class="btn btn-primary" href="https://www.etsy.com/shop/WabiCraftCo" target="_blank" style="display:inline-flex;align-items:center;gap:8px;text-decoration:none;">Get the templates →</a>
     </div>
     <div class="footer-seal">
-      <img src="assets/logo.png" alt="WabiCraftCo" />
+      <img src="uploads/WabiCraftCo.png" alt="WabiCraftCo" />
     </div>
   </div>
 </section>
@@ -688,17 +714,12 @@
 <footer>
   <div class="footer-row">
     <div class="footer-links">
-      <a href="#">About</a>
-      <a href="#">FAQ</a>
-      <a href="#">Terms</a>
-      <a href="#">Privacy</a>
+      <a href="about.html">About</a>
+      <a href="faq.html">FAQ</a>
+      <a href="terms.html">Terms</a>
+      <a href="privacy.html">Privacy</a>
     </div>
     <div class="footer-copy">© 2026 WabiCraftCo</div>
-    <div class="footer-social">
-      <a href="#">Instagram</a>
-      <a href="#">Pinterest</a>
-      <a href="#">Email</a>
-    </div>
   </div>
 </footer>
 
